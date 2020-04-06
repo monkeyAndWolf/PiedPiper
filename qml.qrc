@@ -45,5 +45,6 @@
         <file>qml/setbuilder/ListOfTunesThatAreNotInTheSet.qml</file>
         <file>qml/utilities/MagicDrawer.qml</file>
         <file>assets/show-menu-icon.png</file>
+        <file>qml/DraggyTuneListDelegate.qml</file>
     </qresource>
 </RCC>
