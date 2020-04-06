@@ -16,7 +16,8 @@ Canvas {
     property real alpha: 1.0
     states: [
         State {
-            name: "pressed"; when: ma1.pressed
+            name: "pressed";
+//            when: ma1.pressed
             PropertyChanges { target: triangle; fill: true; }
         }
     ]
