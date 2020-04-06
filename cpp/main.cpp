@@ -74,16 +74,8 @@ int main(int argc, char *argv[])
 
     qRegisterMetaType<TunesModel>("TunesModel");
 
-    QString importDirectory;
     QString actualHomeDir = QDir::homePath();
 
-
-#if MOBILE_DEVICE
-    importDirectory = qgetenv("EXTERNAL_STORAGE");
-//    tunesDirDefault += "/Android/data/co.uk.loralora.PiedPiper/Tunes";
-#else
-    importDirectory = actualHomeDir;
-#endif // MOBILE_DEVICE
 
 #ifndef CUPERTINO_BABY
     tunesDirDefault= QDir::homePath() + QDir::separator() + "PiedPiperTunes";
@@ -126,7 +118,6 @@ int main(int argc, char *argv[])
 
 #if MOBILE_DEVICE
 //    qDebug() << "Home direcotry"<< actualHomeDir;
-//    qDebug() << "Import directory" << importDirectory;
 #endif
 
     SetModel setModel(&logger, tunesDir);
@@ -164,7 +155,6 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
 #endif // DEV_QML
     engine.rootContext()->setContextProperty("actualHomeDir", actualHomeDir);
-    engine.rootContext()->setContextProperty("importDirectory", importDirectory);
     engine.rootContext()->setContextProperty("filePusher", &filePusher);
     engine.rootContext()->setContextProperty("fileSaver", &gfs);
     engine.rootContext()->setContextProperty("setModel", &setModel);

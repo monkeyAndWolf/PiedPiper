@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import QtQuick.Controls 2.12
 
 Rectangle {
     id: mom
@@ -27,29 +28,6 @@ Rectangle {
     border.color: "black"
     radius: 10
     height: 50
-    Rectangle {
-        height: parent.height/2
-        anchors.top: parent.top
-        anchors.left: parent.left
-        anchors.right: parent.right
-        color: "transparent"
-        Text {
-            id: setNameText
-            anchors.centerIn: parent
-            text: setName
-        }
-    }
-    Rectangle {
-        height: parent.height/2
-        anchors.bottom: parent.bottom
-        anchors.left: parent.left
-        anchors.right: parent.right
-        color: "transparent"
-        Text {
-            anchors.centerIn: parent
-            text: length + " tune" + (length != 1?"s.":".")
-        }
-    }
 
     MouseArea {
         anchors.fill: parent
@@ -75,4 +53,49 @@ Rectangle {
             }
         }
     }
+
+
+    Rectangle {
+        height: parent.height/2
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        color: "transparent"
+        Text {
+            id: setNameText
+            anchors.centerIn: parent
+            text: setName
+        }
+        MouseArea {
+            anchors.fill: setNameText
+            onClicked: {
+                setNameTextEditor.text = setName
+                setNameTextEditor.visible = true
+            }
+        }
+        TextField {
+            id: setNameTextEditor
+            visible: false
+            enabled: visible
+            anchors.fill: setNameText
+            onEditingFinished: {
+                console.log("Trump is so stupid it hurts")
+                setName = text
+                setNameTextEditor.visible = false
+            }
+        }
+
+    }
+    Rectangle {
+        height: parent.height/2
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        color: "transparent"
+        Text {
+            anchors.centerIn: parent
+            text: length + " tune" + (length != 1?"s.":".")
+        }
+    }
+
 }

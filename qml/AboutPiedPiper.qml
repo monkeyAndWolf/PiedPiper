@@ -12,6 +12,7 @@ Rectangle {
         anchors.centerIn: parent
         height: parent.height
         width: parent.width
+        anchors.margins: 15
         onWidthChanged: setTextWidth()
         Text {
             x: parent.width * 0.05
@@ -43,7 +44,9 @@ PiedPiper is released under the GNU GPL license: you have a right to the source 
 We have tested the application on Macintosh and Android contraptions, and are satisfied with the performance.
 
 
-The name PiedPiper was inspired by the HBO TV Show ‘Silicon Valley’. The PiedPiper application in SV is a super-high ‘middle out’ compression algorithm. Our implementation takes files of about 2-4k, and allows musicians to expand them to fill up a room, a concert hall, or even a whole life. We submit that we have superior compression ratio here, but concede that we can only achieve this ratio when we work together. As friends.
+The name PiedPiper was inspired by the HBO TV Show ‘Silicon Valley’. The PiedPiper application in SV is a super-high ‘middle out’ compression algorithm. Our implementation takes files of about 2-4k, and allows musicians to expand them to fill up a room, a concert hall, or even a whole country.
+
+We think that we have the better compression ratio.
 
 Peace,
 

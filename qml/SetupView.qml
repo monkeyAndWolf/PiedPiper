@@ -83,13 +83,14 @@ Rectangle {
 
     FileDialog {
         id: elFileDialog
-        folder: importDirectory
+        folder: shortcuts.home
+        selectMultiple: false
         onAccepted: {
             // FIXME at the moment only one file can be added at a time. If that changes, this
             // code will break. And it is so easy to fix.
-            var filename = elFileDialog.fileUrls;
-            logger.logTuneImport(filename[0])
-            var newFile = tuneModel.importAFile(filename[0])
+            var filename = elFileDialog.fileUrl;
+            logger.logTuneImport(filename)
+            var newFile = tuneModel.importAFile(filename)
             newTuneImported(newFile)
         }
     }
