@@ -14,13 +14,10 @@ ApplicationWindow {
     height: 780
     visible: true
 
-    onWidthChanged: {
-        if (width < 601) {
-            styles.narrow = true
-        }
-        else {
-            styles.narrow = false
-        }
+    Binding {
+        target: styles
+        property: "narrow"
+        value: width < 601
     }
 
     property int current: 1
