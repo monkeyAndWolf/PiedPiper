@@ -122,30 +122,6 @@ int main(int argc, char *argv[])
 
     SetModel setModel(&logger, tunesDir);
 
-#if 0
-    Set *set1 = new Set();
-    set1->setSetName("Monkey with this Set");
-    set1->append("/data/data/co.uk.loralora.PiedPiper/files/PiedPiperTunes/giveusadrinkofwater-4.abc");
-    set1->append("/data/data/co.uk.loralora.PiedPiper/files/PiedPiperTunes/chanterssong-1.abc");
-    set1->append("/data/data/co.uk.loralora.PiedPiper/files/PiedPiperTunes/outontheocean-7.abc");
-    setModel.addSet(set1);
-
-    Set *set2 = new Set();
-    set2->setSetName("Practice these tunes");
-    set2->append("/data/data/co.uk.loralora.PiedPiper/files/PiedPiperTunes/concertina-1.abc");
-    set2->append("/data/data/co.uk.loralora.PiedPiper/files/PiedPiperTunes/farewelltoerin-4.abc");
-    set2->append("/data/data/co.uk.loralora.PiedPiper/files/PiedPiperTunes/offtocalifornia-1.abc");
-    setModel.addSet(set2);
-
-    Set *set3 = new Set();
-    set3->setSetName("Jigs to proctice");
-    set3->append("/data/data/co.uk.loralora.PiedPiper/files/PiedPiperTunes/blarneypilgrim-1.abc");
-    set3->append("/data/data/co.uk.loralora.PiedPiper/files/PiedPiperTunes/banishmisfortune-1.abc");
-    set3->append("/data/data/co.uk.loralora.PiedPiper/files/PiedPiperTunes/garrettbarrys-1.abc");
-    set3->append("/data/data/co.uk.loralora.PiedPiper/files/PiedPiperTunes/rollingwaves-1.abc");
-    setModel.addSet(set3);
-#endif
-
     TuneSVGGrndr svgGenerator;
 
 
