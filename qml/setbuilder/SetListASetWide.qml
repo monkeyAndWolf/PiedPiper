@@ -15,6 +15,30 @@ Item {
         texter.text = ttt
     }
 
+    DropArea {
+        id: dropHere
+        anchors.fill: parent
+
+        onEntered: {
+            console.log("entered lol")
+        }
+
+        onExited: {
+            console.log("exited lol")
+        }
+
+//        keys: ['choon']
+        Rectangle {
+            anchors.fill: parent
+            color: "#514"
+            opacity: dropHere.containsDrag ? "0.7" : "0.3"
+            Behavior on opacity {
+                NumberAnimation { duration: 400; easing.type: Easing.InOutCubic }
+            }
+        }
+    }
+
+
     Item {
         id: topYee
         anchors.top: parent.top
