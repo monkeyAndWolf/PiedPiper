@@ -25,41 +25,6 @@
         <file>qml/AboutPiedPiper.qml</file>
         <file>qml/MagicTriangle.qml</file>
         <file>qml/utilities/TopDrawer.qml</file>
-        <file>cpp/filepusher.cpp</file>
-        <file>cpp/filepusher.h</file>
-        <file>cpp/generalfilesaver.cpp</file>
-        <file>cpp/generalfilesaver.h</file>
-        <file>cpp/main.cpp</file>
-        <file>cpp/piedlogger.cpp</file>
-        <file>cpp/piedlogger.h</file>
-        <file>cpp/ppqmlreloadingengine.cpp</file>
-        <file>cpp/ppqmlreloadingengine.h</file>
-        <file>cpp/reloadnotifier.cpp</file>
-        <file>cpp/reloadnotifier.h</file>
-        <file>cpp/set.cpp</file>
-        <file>cpp/set.h</file>
-        <file>cpp/setbuildertunemodel.cpp</file>
-        <file>cpp/setbuildertunemodel.h</file>
-        <file>cpp/setmodel.cpp</file>
-        <file>cpp/setmodel.h</file>
-        <file>cpp/settingsaccess.cpp</file>
-        <file>cpp/settingsaccess.h</file>
-        <file>cpp/styleclass.cpp</file>
-        <file>cpp/styleclass.h</file>
-        <file>cpp/tune.cpp</file>
-        <file>cpp/tune.h</file>
-        <file>cpp/tuneloadingthread.cpp</file>
-        <file>cpp/tuneloadingthread.h</file>
-        <file>cpp/tunesettingsstore.cpp</file>
-        <file>cpp/tunesettingsstore.h</file>
-        <file>cpp/tunesmodel.cpp</file>
-        <file>cpp/tunesmodel.h</file>
-        <file>cpp/tunesvggrndr.cpp</file>
-        <file>cpp/tunesvggrndr.h</file>
-        <file>cpp/websocketclient.cpp</file>
-        <file>cpp/websocketclient.h</file>
-        <file>cpp/websocketserver.cpp</file>
-        <file>cpp/websocketserver.h</file>
         <file>qml/metronome/Metronome.qml</file>
         <file>qml/metronome/MetronomeControlPanel.qml</file>
         <file>qml/metronome/MetronomeLightPanel.qml</file>
