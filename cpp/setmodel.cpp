@@ -2,6 +2,7 @@
 
 #include <QModelIndex>
 #include <QTextStream>
+//#include <QVector>
 
 SetModel::SetModel()
 {
@@ -191,9 +192,16 @@ QString SetModel::getTuneNameAt(QString setName, int index)
 // doesnae work like that so it's not implemented.
 bool SetModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
-    Q_UNUSED(index)
-    Q_UNUSED(value)
-    Q_UNUSED(role)
+    Set *set = m_sets.values().at(index.row());
+
+    if (role == Roles::Name) {
+        set->setSetName(value.toString());
+        QVector<int> v;
+        v << role;
+        saveSettings();
+        emit dataChanged(index, index, v);
+    }
+
     return false;
 }
 
