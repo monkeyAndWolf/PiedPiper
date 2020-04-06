@@ -79,7 +79,6 @@ Rectangle {
             enabled: visible
             anchors.fill: setNameText
             onEditingFinished: {
-                console.log("Trump is so stupid it hurts")
                 setName = text
                 setNameTextEditor.visible = false
             }
